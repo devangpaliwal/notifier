@@ -34,7 +34,7 @@ var Notifier=Class.extend({
 		this.$el=$(this.template);
 		if(this.closeBtn) this.$el.append(this.closeBtnTemplate);
 		$(this.parentSelector).append(this.$el);
-		this.$el.find(".message").css({'display':'inline-block','width':this.$el.width() * .99});
+		this.$el.find(".message").css({'display':'inline-block','width':this.$el.width() * .98});
 		return this;
 	},
 	notify:function(message){

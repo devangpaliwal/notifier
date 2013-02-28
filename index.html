@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Notifier</title>
+	<style>
+		.notifier{ position:fixed; background-color: yellow; top:60px; left:15%; z-index:50; width:65%; padding:5px 10px; }
+	</style>
+	
+	
+	<script type="text/javascript" src="./jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="./underscore.1.4.3.min.js"></script>
+	<script type="text/javascript" src="./inheritance.js"></script>
+	<script type="text/javascript" src="./notifier.js"></script>
+
+</head>
+<body>
+	<article>
+		<header>
+			<h2>Notifier Demo</h2>
+			<button onclick="notifier.notify('Voila! more notifications');">Notify Me</button>		
+		</header>
+	</article>
+<script>
+	var settings={ 'closeBtn':true, 
+			'autoHide':true, 
+			'animation':{ 
+					'showEffect':'fadeIn', 
+					'showEffectDelay':2000, 
+					'closeEffect':'fadeOut', 
+					'closeEffectDelay':300 
+				    }
+		 }; 
+	var notifier = new Notifier(settings); 
+	notifier.notify("Click on the button to get more notifications");
+</script>
+</body>
+</html>
